@@ -10,3 +10,9 @@ jobs:
         run: |
           echo "✅ Runner работает!"
           uname -a
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Запуск Nginx через docker-compose
+        run: |
+          docker-compose up -d
+          docker ps
